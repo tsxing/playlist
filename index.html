@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="favicon.gif">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Music Player</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Questrial&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="site-body">
+
+        <div class="container">
+            <p id="time"> </p>
+            <img draggable="false" id="albumArt" src="albumArt/Booraye_ian_clarke.png" width="300" height="300">
+            
+            <div class="dropdown" style="display:none;">
+                <select id="songSelect" name="songSelect"></select>
+            </div>
+
+            <p class="selected-song" id="selected-song">Select from 124 songs~ ♬</p>
+
+            <div class="button-container">
+                <button id="playPauseButton"><i class="fa fa-play"></i></button>
+                <audio id="audioPlayer">
+                    <source id="audioSource" src="music/Booraye_ian_clarke.mp3" type="audio/mp3"> <!-- Update the path to your music file -->
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <label class="switch">
+                <input type="checkbox" onclick="toggleTheme()">
+                <span class="slider"></span>
+            </label>
+        </div>
+
+        <div id="container-playlist" class="container-playlist">
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="time.js"></script>
+</body>
+</html>
